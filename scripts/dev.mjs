@@ -26,7 +26,11 @@ try {
   /* ignore */
 }
 
-rmSync(nextDir, { recursive: true, force: true });
+try {
+  rmSync(nextDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
+} catch {
+  execSync(`rm -rf "${nextDir}"`, { shell: true, stdio: "ignore" });
+}
 
 console.log("Starting dev server (clean .next cache)…\n");
 

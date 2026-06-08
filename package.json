@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/dev.mjs",
-    "dev:fast": "next dev",
-    "build": "next build",
+    "build": "node scripts/stop-dev.mjs && next build",
     "build:check": "rm -rf .next && next build",
     "start": "next start",
     "lint": "next lint"

@@ -11,9 +11,11 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-100/80 bg-cream/95 shadow-sm shadow-navy-900/5 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-950/95 shadow-md shadow-navy-950/40 backdrop-blur-md">
       <div className="container-content flex h-24 items-center justify-between py-3.5">
-        <Logo />
+        <div className="rounded-xl bg-white px-2.5 py-1.5 shadow-sm ring-1 ring-white/10 sm:px-3 sm:py-2">
+          <Logo />
+        </div>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {nav.map((item) => {
@@ -24,8 +26,8 @@ export function Header() {
                 href={item.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   active
-                    ? "text-navy-900"
-                    : "text-navy-500 hover:text-navy-900"
+                    ? "text-gold"
+                    : "text-white/75 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -40,7 +42,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -55,7 +57,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-navy-100 bg-cream md:hidden">
+        <div className="border-t border-white/10 bg-navy-950 md:hidden">
           <nav className="container-content flex flex-col gap-1 py-4" aria-label="Mobile">
             {nav.map((item) => {
               const active = pathname === item.href;
@@ -66,8 +68,8 @@ export function Header() {
                   onClick={() => setOpen(false)}
                   className={`rounded-lg px-4 py-3 text-base font-medium transition-colors ${
                     active
-                      ? "bg-gold/10 text-navy-900"
-                      : "text-navy-700 hover:bg-cream"
+                      ? "bg-gold/15 text-gold"
+                      : "text-white/80 hover:bg-white/5 hover:text-white"
                   }`}
                 >
                   {item.label}

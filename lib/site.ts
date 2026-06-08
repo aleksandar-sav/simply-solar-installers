@@ -95,6 +95,8 @@ export const testimonials = [
     name: "D. Cookman",
     role: "Director, D Cookman Electrical Solar",
     location: "England",
+    logo: "/images/partners/cookman.png",
+    logoAlt: "D Cookman Electrical Solar logo",
   },
   {
     quote:
@@ -102,6 +104,8 @@ export const testimonials = [
     name: "Empire Electrical Innovations",
     role: "Electrical & solar company",
     location: "England",
+    logo: "/images/partners/empire.jpg",
+    logoAlt: "Empire Electrical Innovations logo",
   },
   {
     quote:
@@ -109,6 +113,8 @@ export const testimonials = [
     name: "Synergy PV",
     role: "Solar PV company",
     location: "England",
+    logo: "/images/partners/synergy.png",
+    logoAlt: "Synergy PV Renewables logo",
   },
 ];
 
