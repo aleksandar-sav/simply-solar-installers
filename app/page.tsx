@@ -360,18 +360,18 @@ export default function HomePage() {
               </Link>
             </Reveal>
 
-            <Reveal delay={120} className="max-md:order-2 max-md:flex max-md:justify-center md:flex md:justify-end">
-              <div className="relative w-[10.5rem] sm:w-48 md:w-full md:max-w-[22rem] lg:max-w-[26rem]">
-                <div className="relative aspect-[5/6] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 max-md:mx-auto md:aspect-[4/5] lg:aspect-[3/4]">
+            <Reveal delay={120} className="max-md:order-2 md:flex md:justify-end">
+              <div className="relative w-full md:max-w-[22rem] lg:max-w-[26rem]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 sm:aspect-[5/3] md:aspect-[4/5] lg:aspect-[3/4]">
                   <Image
                     src="/images/whitelabel.jpg"
                     alt="Simply Solar installer fitting solar panels on a commercial roof under a clear blue sky"
                     fill
-                    sizes="(max-width: 640px) 168px, (max-width: 1024px) 352px, 416px"
-                    className="object-cover object-[center_35%]"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 352px, 416px"
+                    className="object-cover object-[center_40%] md:object-[center_35%]"
                   />
                 </div>
-                <div className="absolute left-3 top-3 rounded-xl bg-gold-50 px-3 py-2 shadow-card max-md:left-2 max-md:top-2">
+                <div className="absolute left-3 top-3 rounded-xl bg-gold-50 px-3 py-2 shadow-card sm:left-4 sm:top-4">
                   <p className="font-display text-xs font-bold leading-none text-navy-900">
                     White-label
                   </p>
