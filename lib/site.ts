@@ -4,6 +4,7 @@ export const site = {
   tagline: "Sub-contract solar installation to MCS guidelines",
   url: "https://simplysolarinstallers.co.uk",
   email: "jack@simplysolarinstallers.co.uk",
+  formspreeFormId: "xaqzoalk",
   phone: "+44 7936 042036",
   phoneDisplay: "07936 042036",
   whatsapp: "https://wa.me/447936042036",

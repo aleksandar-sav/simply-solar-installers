@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { site } from "@/lib/site";
 
 type ContactPayload = {
   company?: string;
@@ -12,7 +13,7 @@ type ContactPayload = {
 };
 
 export async function POST(request: Request) {
-  const formId = process.env.FORMSPREE_FORM_ID ?? "xaqzoalk";
+  const formId = process.env.FORMSPREE_FORM_ID ?? site.formspreeFormId;
 
   let body: ContactPayload;
   try {
