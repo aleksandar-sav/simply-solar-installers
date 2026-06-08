@@ -12,7 +12,7 @@ type ContactPayload = {
 };
 
 export async function POST(request: Request) {
-  const formId = process.env.FORMSPREE_FORM_ID ?? "mwvjorwe";
+  const formId = process.env.FORMSPREE_FORM_ID ?? "xaqzoalk";
 
   let body: ContactPayload;
   try {
