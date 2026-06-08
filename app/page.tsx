@@ -340,29 +340,29 @@ export default function HomePage() {
 
       {/* White-label band */}
       <section className="overflow-hidden bg-gold">
-        <div className="container-content py-7 sm:py-9 lg:py-12">
-          <div className="grid gap-5 max-md:gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-center md:gap-8 lg:gap-12">
+        <div className="container-content py-7 sm:py-9 md:py-8 lg:py-9">
+          <div className="grid gap-5 max-md:gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-center md:gap-6 lg:gap-8">
             <Reveal className="max-md:order-1">
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-navy-800 sm:text-xs">
                 Completely white-label
               </span>
-              <h2 className="mt-1.5 text-lg font-bold leading-snug text-navy-900 sm:mt-2 sm:text-2xl lg:text-[2rem]">
+              <h2 className="mt-1.5 text-lg font-bold leading-snug text-navy-900 sm:mt-2 sm:text-2xl md:mt-1.5 md:text-[1.65rem] lg:text-[1.75rem]">
                 Your brand on the van. Our expertise on the roof.
               </h2>
-              <p className="mt-2 max-w-md text-xs leading-relaxed text-navy-900/80 sm:mt-3 sm:max-w-lg sm:text-sm lg:max-w-xl">
+              <p className="mt-2 max-w-md text-xs leading-relaxed text-navy-900/80 sm:mt-3 sm:max-w-lg sm:text-sm md:mt-2 lg:max-w-xl">
                 We work entirely under your brand. Your clients will never know
                 we&apos;re not your in-house team — they&apos;ll just know the job
                 was done right, to MCS guidelines every time and a tidy site left
                 behind.
               </p>
-              <Link href="/services" className="btn-navy mt-3 px-5 py-2.5 text-xs sm:mt-5 sm:px-7 sm:py-3.5 sm:text-sm">
+              <Link href="/services" className="btn-navy mt-3 px-5 py-2.5 text-xs sm:mt-5 sm:px-7 sm:py-3.5 sm:text-sm md:mt-4">
                 Explore our services
               </Link>
             </Reveal>
 
             <Reveal delay={120} className="max-md:order-2 md:flex md:justify-end">
-              <div className="relative w-full md:max-w-[22rem] lg:max-w-[26rem]">
-                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 sm:aspect-[5/3] md:aspect-[4/5] lg:aspect-[3/4]">
+              <div className="relative w-full md:max-w-[20rem] lg:max-w-[22rem]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 sm:aspect-[5/3] md:aspect-[5/4] lg:aspect-[3/2]">
                   <Image
                     src="/images/whitelabel.jpg"
                     alt="Simply Solar installer fitting solar panels on a commercial roof under a clear blue sky"
