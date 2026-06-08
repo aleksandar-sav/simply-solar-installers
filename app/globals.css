@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(0, -1.5%, 0);
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-navy-900 antialiased overflow-x-clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-navy-900 shadow-[0_8px_24px_-8px_rgba(245,166,35,0.6)] hover:bg-gold-300 hover:-translate-y-0.5 focus-visible:ring-gold;
+  }
+
+  .btn-navy {
+    @apply btn bg-navy-900 text-white hover:bg-navy-800 hover:-translate-y-0.5 focus-visible:ring-navy-900;
+  }
+
+  .btn-outline {
+    @apply btn border border-navy-200 bg-white text-navy-900 hover:border-navy-900 hover:-translate-y-0.5 focus-visible:ring-navy-900;
+  }
+
+  .btn-ghost-light {
+    @apply btn border border-white/30 bg-white/10 text-white backdrop-blur hover:bg-white/20 focus-visible:ring-white;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600;
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+}
+
+@layer utilities {
+  .animate-kenburns {
+    animation: kenburns 18s ease-out forwards;
+  }
+
+  .animate-kenburns-slow {
+    animation: kenburns 26s ease-in-out infinite alternate;
+  }
+
+  .animate-floaty {
+    animation: floaty 6s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-kenburns,
+    .animate-kenburns-slow,
+    .animate-floaty {
+      animation: none;
+    }
+  }
+}
