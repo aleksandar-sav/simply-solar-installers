@@ -25,7 +25,7 @@ function ArrowBtn({
         ${
           light
             ? "border-white/30 bg-white/10 text-white hover:bg-white/25 disabled:opacity-25"
-            : "border-navy-200 bg-white text-navy-800 shadow-sm hover:border-gold hover:text-navy-900 hover:shadow-card disabled:opacity-30"
+            : "border-navy-200 bg-gold-50 text-navy-800 shadow-sm hover:border-gold hover:text-navy-900 hover:shadow-card disabled:opacity-30"
         }`}
     >
       <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

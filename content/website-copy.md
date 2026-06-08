@@ -133,5 +133,5 @@ Based in Hertfordshire, Simply Solar Installers provides sub-contract solar inst
 ## Still Needed From Client
 
 - [ ] Full business address (for Google Maps embed + LocalBusiness schema)
-- [ ] Confirm testimonials are approved for use / real
+- [ ] Confirm testimonial quotes are approved by D Cookman Electrical Solar, Empire Electrical Innovations & Synergy PV
 - [ ] MCS membership / guideline reference (optional, adds trust)

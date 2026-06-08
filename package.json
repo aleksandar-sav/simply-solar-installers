@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/dev.mjs",
+    "dev:fast": "next dev",
     "build": "next build",
+    "build:check": "rm -rf .next && next build",
     "start": "next start",
     "lint": "next lint"
   },

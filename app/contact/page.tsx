@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="relative isolate overflow-hidden border-b border-navy-100 bg-gradient-to-br from-gold/20 via-cream to-white">
+      <section className="relative isolate overflow-hidden border-b border-navy-100 surface-warm">
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gold/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
         <div className="container-content relative py-12 sm:py-20">
@@ -30,9 +30,9 @@ export default function ContactPage() {
       </section>
 
       {/* Form + details */}
-      <section className="pb-20 pt-10 sm:pb-28 sm:pt-16">
+      <section className="surface-warm pb-20 pt-10 sm:pb-28 sm:pt-16">
         <div className="container-content grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
-          <div className="rounded-3xl border border-navy-100 bg-white p-7 shadow-card sm:p-10">
+          <div className="rounded-3xl surface-card p-7 sm:p-10">
             <h2 className="text-xl font-bold text-navy-900">
               Send us a partner enquiry
             </h2>
@@ -48,7 +48,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             <a
               href={site.whatsappText}
-              className="flex items-start gap-4 rounded-2xl border border-navy-100 bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
+              className="flex items-start gap-4 rounded-2xl surface-card p-6 transition-shadow hover:shadow-card-hover"
             >
               <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-[#25D366]/10 text-[#25D366]">
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden="true">
@@ -64,7 +64,7 @@ export default function ContactPage() {
 
             <a
               href={`mailto:${site.email}`}
-              className="flex items-start gap-4 rounded-2xl border border-navy-100 bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
+              className="flex items-start gap-4 rounded-2xl surface-card p-6 transition-shadow hover:shadow-card-hover"
             >
               <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-navy-50 text-navy-700">
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -78,7 +78,7 @@ export default function ContactPage() {
               </span>
             </a>
 
-            <div className="flex items-start gap-4 rounded-2xl border border-navy-100 bg-white p-6 shadow-card">
+            <div className="flex items-start gap-4 rounded-2xl surface-card p-6">
               <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-navy-50 text-navy-700">
                 <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   <path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z" strokeLinejoin="round" />
@@ -96,7 +96,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <section className="pb-20 sm:pb-28">
+      <section className="surface-warm pb-20 sm:pb-28">
         <div className="container-content">
           <div className="overflow-hidden rounded-3xl border border-navy-100 shadow-card">
             <iframe

@@ -11,7 +11,7 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-100/80 bg-white/90 shadow-sm shadow-navy-900/5 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-navy-100/80 bg-cream/95 shadow-sm shadow-navy-900/5 backdrop-blur-md">
       <div className="container-content flex h-24 items-center justify-between py-3.5">
         <Logo />
 
@@ -55,7 +55,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-navy-100 bg-white md:hidden">
+        <div className="border-t border-navy-100 bg-cream md:hidden">
           <nav className="container-content flex flex-col gap-1 py-4" aria-label="Mobile">
             {nav.map((item) => {
               const active = pathname === item.href;

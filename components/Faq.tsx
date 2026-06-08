@@ -2,7 +2,7 @@ import { faqs } from "@/lib/site";
 
 export function Faq() {
   return (
-    <div className="mx-auto mt-12 max-w-3xl divide-y divide-navy-100 overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-card">
+    <div className="mx-auto mt-12 max-w-3xl divide-y divide-navy-100 overflow-hidden rounded-2xl surface-card">
       {faqs.map((item) => (
         <details key={item.q} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-navy-900 transition-colors hover:bg-navy-50/60">

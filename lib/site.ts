@@ -90,24 +90,24 @@ export const services = [
 export const testimonials = [
   {
     quote:
-      "We were drowning in installation problems. Cancellations, no-shows, a lad who went off sick for three months and left us in the lurch with six jobs booked. We brought Simply Solar in on a trial and honestly haven't looked back. Proper professional outfit, everything done to MCS standards every time, and Jack actually answers his phone. Rare as anything in this industry.",
-    name: "D. Mitchell",
-    role: "Operations Director, Bright Arc Solar",
-    location: "Leeds",
+      "We use Simply Solar for our installation work across the South — residential and commercial. Jack's team turn up when they say they will, everything is done to MCS guidelines, and our customers only ever see our brand. Exactly what we needed from a sub-contract partner.",
+    name: "D. Cookman",
+    role: "Director, D Cookman Electrical Solar",
+    location: "England",
   },
   {
     quote:
-      "We sell solar, we don't install it — that's always been our model. Finding a reliable sub-contractor who works to MCS standards and could keep up with our volume without embarrassing us in front of clients was genuinely difficult until we found Simply Solar. Eighteen months in, not one complaint from a customer about the installation side. That's all I needed.",
-    name: "S. Patel",
-    role: "Managing Director, Greenlight Energy Solutions",
-    location: "Manchester",
+      "Empire is electrical first — solar is a growing part of what we offer. Simply Solar handle the roof work properly so we can focus on sales and design. Clean installs, tidy sites, paperwork always in order. Reliable enough that we've stopped looking elsewhere.",
+    name: "Empire Electrical Innovations",
+    role: "Electrical & solar company",
+    location: "England",
   },
   {
     quote:
-      "Had a nightmare with our previous installation team — two bad jobs in a row, one client threatening to go to Trading Standards. Brought Jack in to clean up the mess and then just kept him on. The quality is consistent, the paperwork is always in order, and they leave every job tidy. Clients have actually commented on it. Wouldn't use anyone else now.",
-    name: "T. Clarke",
-    role: "Director, SunRoute Solar",
-    location: "Kent",
+      "Volume was our problem — we were turning work away because we couldn't install fast enough. Jack took that pressure off completely. White-label every time, consistent quality, and he actually picks up the phone. One of the few sub-contractors we'd recommend without hesitation.",
+    name: "Synergy PV",
+    role: "Solar PV company",
+    location: "England",
   },
 ];
 

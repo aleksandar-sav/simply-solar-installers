@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
-import { Reveal } from "@/components/Reveal";
 import { Carousel } from "@/components/Carousel";
+import { PageHero } from "@/components/PageHero";
+import { AnimatedTrustBand } from "@/components/AnimatedTrustBand";
+import { Reveal } from "@/components/Reveal";
 import { services, faqs, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -30,77 +32,37 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Page header */}
-      <section className="relative isolate overflow-hidden border-b border-navy-100 bg-gradient-to-br from-gold/20 via-cream to-white">
-        <div className="pointer-events-none absolute -right-32 -top-24 h-96 w-96 rounded-full bg-gold/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-        <div className="container-content relative grid grid-cols-1 items-center gap-7 py-10 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:py-24">
-          <div>
-            <span className="eyebrow">What we handle</span>
-            <h1 className="mt-3 text-3xl font-bold leading-[1.15] text-navy-900 sm:text-4xl lg:text-5xl">
-              Complete solar installation services across Hertfordshire and the
-              UK — sub-contracted under your brand.
-            </h1>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-navy-600 sm:text-lg">
-              From a single residential roof to large-scale commercial arrays,
-              we deliver every installation to MCS guidelines, white-label, on
-              time. You sell it — we install it.
-            </p>
-            <ul className="mt-6 flex flex-wrap gap-2.5">
-              {["Residential", "Commercial", "Bird proofing", "Maintenance"].map(
-                (chip) => (
-                  <li
-                    key={chip}
-                    className="rounded-full border border-navy-100 bg-cream px-4 py-1.5 text-sm font-medium text-navy-700"
-                  >
-                    {chip}
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+      <PageHero
+        compact
+        image="/images/services-hero.jpg"
+        imageAlt="Installer fitting solar panels on a large commercial metal roof"
+        eyebrow="What we handle"
+        title={
+          <>
+            Complete solar installation services.{" "}
+            <span className="bg-gradient-to-r from-gold-200 via-gold-400 to-gold-500 bg-clip-text text-transparent">
+              Sub-contracted under your brand.
+            </span>
+          </>
+        }
+        description="From a single residential roof to large-scale commercial arrays — every install to MCS guidelines, white-label, on time."
+      />
 
-          <Reveal delay={120} className="relative">
-            <div className="relative mx-auto w-full max-w-md">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl ring-1 ring-navy-900/10">
-                <Image
-                  src="/images/projects/p24.jpg"
-                  alt="Black solar panels installed on a house roof against a clear blue sky"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 90vw, 460px"
-                  className="animate-kenburns-slow object-cover"
-                />
-              </div>
-              {/* Offset secondary photo */}
-              <div className="absolute -bottom-6 -left-5 hidden w-40 overflow-hidden rounded-2xl shadow-card ring-4 ring-white sm:block">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src="/images/projects/p26.jpg"
-                    alt="Installer fitting solar panels on a commercial metal roof"
-                    fill
-                    sizes="160px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              {/* Floating badge */}
-              <div className="animate-floaty absolute -right-3 -top-3 rounded-2xl bg-gold px-4 py-2.5 shadow-card">
-                <p className="font-display text-sm font-bold leading-none text-navy-900">
-                  To MCS guidelines
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <AnimatedTrustBand
+        items={[
+          "To MCS guidelines",
+          "White-label",
+          "48hr booking",
+          "Hertfordshire & UK",
+        ]}
+      />
 
       {/* Services grid */}
-      <section className="section relative isolate overflow-hidden">
+      <section className="surface-warm pb-20 pt-10 sm:pb-28 sm:pt-14">
         <div className="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
         <div className="container-content relative">
           {/* Mobile: cinematic image-led swipe deck */}
-          <div className="sm:hidden">
+          <Reveal className="sm:hidden">
             <Carousel ariaLabel="Our services">
               {services.map((service, i) => (
                 <article
@@ -112,6 +74,7 @@ export default function ServicesPage() {
                     alt={service.alt}
                     fill
                     sizes="90vw"
+                    quality={90}
                     className="animate-kenburns-slow object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/35 to-transparent" />
@@ -132,21 +95,20 @@ export default function ServicesPage() {
                 </article>
               ))}
             </Carousel>
-          </div>
+          </Reveal>
 
           {/* Tablet / desktop grid */}
           <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white shadow-card transition-shadow hover:shadow-card-hover"
-              >
+            {services.map((service, i) => (
+              <Reveal key={service.title} delay={i * 90}>
+                <article className="group flex h-full flex-col overflow-hidden rounded-2xl surface-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.alt}
                     fill
                     sizes="(max-width: 1024px) 50vw, 33vw"
+                    quality={90}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
@@ -158,7 +120,8 @@ export default function ServicesPage() {
                     {service.body}
                   </p>
                 </div>
-              </article>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -168,7 +131,8 @@ export default function ServicesPage() {
       <section className="relative isolate overflow-hidden bg-gold py-12 sm:py-14">
         <div className="pointer-events-none absolute -right-24 -top-20 h-72 w-72 rounded-full bg-white/25 blur-3xl" />
         <div className="container-content relative grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div>
+          <Reveal>
+            <div>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-navy-800">
               Where we work
             </span>
@@ -185,36 +149,42 @@ export default function ServicesPage() {
               {site.areas.map((area) => (
                 <li
                   key={area}
-                  className="rounded-full border border-navy-900/15 bg-white/50 px-3.5 py-1 text-xs font-medium text-navy-800 sm:text-sm"
+                  className="rounded-full border border-navy-900/15 bg-gold-50/80 px-3.5 py-1 text-xs font-medium text-navy-800 sm:text-sm"
                 >
                   {area}
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-xl ring-1 ring-navy-900/10 lg:aspect-[3/2]">
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-xl ring-1 ring-navy-900/10 lg:aspect-[3/2]">
             <Image
               src="/images/commercial-install.jpg"
               alt="Large black solar panel array installed on a roof against a bright sky in England"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
+              quality={90}
               className="object-cover"
             />
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="section relative isolate overflow-hidden">
+      <section className="section surface-warm">
         <div className="pointer-events-none absolute -right-24 bottom-12 h-80 w-80 rounded-full bg-gold/12 blur-3xl" />
         <div className="container-content relative">
-          <div className="mx-auto max-w-3xl text-center">
+          <Reveal className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">FAQ</span>
             <h2 className="mt-3 text-4xl font-bold leading-tight text-navy-900 sm:text-5xl">
               Common questions from solar companies
             </h2>
-          </div>
-          <Faq />
+          </Reveal>
+          <Reveal delay={100}>
+            <Faq />
+          </Reveal>
         </div>
       </section>
 

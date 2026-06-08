@@ -35,7 +35,7 @@ const config: Config = {
           800: "#8e3d0f",
           900: "#753310",
         },
-        cream: "#faf9f6",
+        cream: "#fdf8ef",
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],

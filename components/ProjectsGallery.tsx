@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import { Reveal } from "@/components/Reveal";
 import { projects, type ProjectCategory } from "@/lib/site";
 
 type Filter = "All" | ProjectCategory;
@@ -46,38 +47,44 @@ export function ProjectsGallery() {
   return (
     <>
       {/* Filter tabs */}
-      <div className="flex flex-wrap items-center gap-2">
-        {filters.map((f) => (
-          <button
-            key={f}
-            type="button"
-            onClick={() => setFilter(f)}
-            className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
-              filter === f
-                ? "bg-navy-900 text-white"
-                : "border border-navy-200 bg-white text-navy-600 hover:border-navy-400"
-            }`}
-          >
-            {f}
-          </button>
-        ))}
-      </div>
+      <Reveal>
+        <div className="flex flex-wrap items-center gap-2">
+          {filters.map((f) => (
+            <button
+              key={f}
+              type="button"
+              onClick={() => setFilter(f)}
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
+                filter === f
+                  ? "bg-navy-900 text-white shadow-sm"
+                  : "border border-navy-200 bg-gold-50 text-navy-600 hover:border-navy-400 hover:-translate-y-0.5"
+              }`}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+      </Reveal>
 
       {/* Grid */}
-      <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+      <div
+        key={filter}
+        className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3"
+      >
         {visible.map((p, i) => (
-          <button
-            key={p.src}
-            type="button"
-            onClick={() => setLightbox(i)}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-100 shadow-card"
-            aria-label={`View project: ${p.alt}`}
-          >
+          <Reveal key={p.src} delay={(i % 3) * 85}>
+            <button
+              type="button"
+              onClick={() => setLightbox(i)}
+              className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-navy-100 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+              aria-label={`View project: ${p.alt}`}
+            >
             <Image
               src={p.src}
               alt={p.alt}
               fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
+              quality={88}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 420px"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -89,7 +96,8 @@ export function ProjectsGallery() {
                 <path d="M3 8V3h5M17 12v5h-5M3 3l6 6M17 17l-6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-          </button>
+            </button>
+          </Reveal>
         ))}
       </div>
 

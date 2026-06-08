@@ -10,7 +10,7 @@ export function WhatsAppBubble() {
       className="group fixed bottom-5 right-5 z-40 flex items-center sm:bottom-7 sm:right-8"
     >
       {/* Desktop hover label — stays hidden on phone */}
-      <span className="pointer-events-none mr-0 max-w-0 overflow-hidden whitespace-nowrap rounded-full bg-white py-2.5 pl-0 pr-0 text-sm font-semibold text-navy-900 opacity-0 shadow-card ring-1 ring-navy-100 transition-all duration-300 group-hover:mr-3 group-hover:max-w-[11rem] group-hover:pl-4 group-hover:pr-4 group-hover:opacity-100 max-md:hidden">
+      <span className="pointer-events-none mr-0 max-w-0 overflow-hidden whitespace-nowrap rounded-full bg-gold-50 py-2.5 pl-0 pr-0 text-sm font-semibold text-navy-900 opacity-0 shadow-card ring-1 ring-navy-100 transition-all duration-300 group-hover:mr-3 group-hover:max-w-[11rem] group-hover:pl-4 group-hover:pr-4 group-hover:opacity-100 max-md:hidden">
         Message Jack
       </span>
 
