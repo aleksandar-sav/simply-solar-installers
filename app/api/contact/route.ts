@@ -12,13 +12,7 @@ type ContactPayload = {
 };
 
 export async function POST(request: Request) {
-  const formId = process.env.FORMSPREE_FORM_ID;
-  if (!formId) {
-    return NextResponse.json(
-      { error: "Contact form is not configured yet." },
-      { status: 503 }
-    );
-  }
+  const formId = process.env.FORMSPREE_FORM_ID ?? "mwvjorwe";
 
   let body: ContactPayload;
   try {

@@ -9,9 +9,9 @@ export function CtaBand({
   body?: string;
 }) {
   return (
-    <section className="section">
+    <section className="py-5 sm:py-20 lg:py-28">
       <div className="container-content">
-        <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-7 py-14 sm:px-14 sm:py-20">
+        <div className="relative overflow-hidden rounded-3xl bg-navy-900 px-6 py-10 sm:px-14 sm:py-20">
           <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-gold/5 blur-3xl" />
           <div className="relative max-w-2xl">

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { site } from "@/lib/site";
 
 const inputClass =
-  "w-full rounded-xl border border-navy-200 bg-gold-50 px-4 py-3 text-sm text-navy-900 placeholder:text-navy-300 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-200";
+  "w-full rounded-lg border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-300 focus:border-navy-500 focus:outline-none focus:ring-2 focus:ring-navy-200";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -62,7 +62,7 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-2xl border border-navy-100 bg-cream p-8 text-center">
+      <div className="rounded-xl border border-navy-100 bg-white p-6 text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/20 text-gold-600">
           <svg viewBox="0 0 20 20" className="h-7 w-7" fill="currentColor" aria-hidden="true">
             <path

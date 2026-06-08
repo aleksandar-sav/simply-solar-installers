@@ -58,7 +58,7 @@ export default function ServicesPage() {
       />
 
       {/* Services grid */}
-      <section className="surface-warm pb-20 pt-10 sm:pb-28 sm:pt-14">
+      <section className="surface-warm pb-12 pt-8 sm:pb-28 sm:pt-14">
         <div className="pointer-events-none absolute -left-24 top-16 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
         <div className="container-content relative">
           {/* Mobile: cinematic image-led swipe deck */}
@@ -67,7 +67,7 @@ export default function ServicesPage() {
               {services.map((service, i) => (
                 <article
                   key={service.title}
-                  className="relative h-[26rem] overflow-hidden rounded-3xl shadow-card"
+                  className="relative h-[21rem] overflow-hidden rounded-2xl shadow-card"
                 >
                   <Image
                     src={service.image}
@@ -78,17 +78,17 @@ export default function ServicesPage() {
                     className="animate-kenburns-slow object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/35 to-transparent" />
-                  <span className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center rounded-xl bg-gold font-display text-lg font-bold text-navy-900">
+                  <span className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-lg bg-gold font-display text-base font-bold text-navy-900">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="absolute right-5 top-6 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                  <span className="absolute right-4 top-5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white/70">
                     Service
                   </span>
-                  <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                    <h2 className="text-2xl font-bold leading-snug">
+                  <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                    <h2 className="text-xl font-bold leading-snug">
                       {service.title}
                     </h2>
-                    <p className="mt-2.5 text-sm leading-relaxed text-white/85">
+                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-white/85">
                       {service.body}
                     </p>
                   </div>
@@ -173,7 +173,7 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section surface-warm">
+      <section className="surface-warm py-8 pb-4 sm:py-20 sm:pb-12 lg:py-28">
         <div className="pointer-events-none absolute -right-24 bottom-12 h-80 w-80 rounded-full bg-gold/12 blur-3xl" />
         <div className="container-content relative">
           <Reveal className="mx-auto max-w-3xl text-center">

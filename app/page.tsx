@@ -338,59 +338,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* White-label band (gold for contrast) */}
-      <section className="bg-gold">
-        <div className="container-content grid grid-cols-1 items-center gap-10 py-16 lg:grid-cols-2 lg:py-20">
-          <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-navy-800">
-              Completely white-label
-            </span>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy-900 sm:text-4xl">
-              Your brand on the van. Our expertise on the roof.
-            </h2>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-navy-900/80">
-              We work entirely under your brand. Your clients will never know
-              we&apos;re not your in-house team — they&apos;ll just know the job
-              was done right, to MCS guidelines every time and a tidy site left
-              behind.
-            </p>
-            <Link href="/services" className="btn-navy mt-7">
-              Explore our services
-            </Link>
-          </Reveal>
-          <Reveal delay={120} className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[280px]">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-xl ring-1 ring-navy-900/10">
-                <Image
-                  src="/images/whitelabel.jpg"
-                  alt="Simply Solar installer fitting solar panels on a commercial roof under a clear blue sky"
-                  fill
-                  sizes="(max-width: 1024px) 70vw, 280px"
-                  className="animate-kenburns-slow object-cover"
-                />
+      {/* White-label band */}
+      <section className="overflow-hidden bg-gold">
+        <div className="container-content py-7 sm:py-9 lg:py-12">
+          <div className="grid gap-5 max-md:gap-4 md:grid-cols-2 md:items-center md:gap-10">
+            <Reveal className="max-md:order-1">
+              <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-navy-800 sm:text-xs">
+                Completely white-label
+              </span>
+              <h2 className="mt-1.5 text-lg font-bold leading-snug text-navy-900 sm:mt-2 sm:text-2xl lg:text-[1.85rem]">
+                Your brand on the van. Our expertise on the roof.
+              </h2>
+              <p className="mt-2 max-w-md text-xs leading-relaxed text-navy-900/80 sm:mt-3 sm:text-sm">
+                We work entirely under your brand. Your clients will never know
+                we&apos;re not your in-house team — they&apos;ll just know the job
+                was done right, to MCS guidelines every time and a tidy site left
+                behind.
+              </p>
+              <Link href="/services" className="btn-navy mt-3 px-5 py-2.5 text-xs sm:mt-5 sm:px-7 sm:py-3.5 sm:text-sm">
+                Explore our services
+              </Link>
+            </Reveal>
+
+            <Reveal delay={120} className="max-md:order-2 max-md:flex max-md:justify-center md:justify-end">
+              <div className="relative w-[10.5rem] sm:w-48 md:max-w-[16rem] lg:max-w-[18rem]">
+                <div className="relative aspect-[5/6] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 max-md:mx-auto md:aspect-[4/5]">
+                  <Image
+                    src="/images/whitelabel.jpg"
+                    alt="Simply Solar installer fitting solar panels on a commercial roof under a clear blue sky"
+                    fill
+                    sizes="(max-width: 640px) 168px, (max-width: 1024px) 216px, 288px"
+                    className="object-cover object-[center_35%]"
+                  />
+                </div>
+                <div className="absolute left-3 top-3 rounded-xl bg-gold-50 px-3 py-2 shadow-card max-md:left-2 max-md:top-2">
+                  <p className="font-display text-xs font-bold leading-none text-navy-900">
+                    White-label
+                  </p>
+                  <p className="mt-0.5 text-[0.5rem] font-semibold uppercase tracking-wider text-gold-600">
+                    Under your brand
+                  </p>
+                </div>
               </div>
-              {/* Floating badge for a bit more life */}
-              <div className="animate-floaty absolute -left-4 -top-4 rounded-2xl bg-gold-50 px-4 py-3 shadow-card">
-                <p className="font-display text-base font-bold leading-none text-navy-900">
-                  White-label
-                </p>
-                <p className="mt-1 text-[0.58rem] font-semibold uppercase tracking-wider text-gold-600">
-                  Under your brand
-                </p>
-              </div>
-              {/* Decorative offset frame */}
-              <div className="pointer-events-none absolute -bottom-4 -right-4 -z-10 h-24 w-24 rounded-2xl bg-navy-900/10" />
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="section surface-warm">
+      <section className="surface-warm py-8 pb-4 sm:section">
         <div className="container-content">
           <Reveal className="max-w-3xl">
             <span className="eyebrow">Trusted by solar companies</span>
-            <h2 className="mt-3 text-4xl font-bold leading-tight text-navy-900 sm:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-navy-900 sm:text-4xl lg:text-5xl">
               The partner solar companies don&apos;t want to share.
             </h2>
           </Reveal>
@@ -406,7 +406,7 @@ export default function HomePage() {
 
           {/* Mobile / tablet slideshow */}
           <Carousel
-            className="mt-10 lg:hidden"
+            className="mt-6 sm:mt-10 lg:hidden"
             ariaLabel="What solar companies say"
             peek={false}
             indicator="dots"
