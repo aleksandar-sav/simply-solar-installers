@@ -341,15 +341,15 @@ export default function HomePage() {
       {/* White-label band */}
       <section className="overflow-hidden bg-gold">
         <div className="container-content py-7 sm:py-9 lg:py-12">
-          <div className="grid gap-5 max-md:gap-4 md:grid-cols-2 md:items-center md:gap-10">
+          <div className="grid gap-5 max-md:gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:items-center md:gap-8 lg:gap-12">
             <Reveal className="max-md:order-1">
               <span className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-navy-800 sm:text-xs">
                 Completely white-label
               </span>
-              <h2 className="mt-1.5 text-lg font-bold leading-snug text-navy-900 sm:mt-2 sm:text-2xl lg:text-[1.85rem]">
+              <h2 className="mt-1.5 text-lg font-bold leading-snug text-navy-900 sm:mt-2 sm:text-2xl lg:text-[2rem]">
                 Your brand on the van. Our expertise on the roof.
               </h2>
-              <p className="mt-2 max-w-md text-xs leading-relaxed text-navy-900/80 sm:mt-3 sm:text-sm">
+              <p className="mt-2 max-w-md text-xs leading-relaxed text-navy-900/80 sm:mt-3 sm:max-w-lg sm:text-sm lg:max-w-xl">
                 We work entirely under your brand. Your clients will never know
                 we&apos;re not your in-house team — they&apos;ll just know the job
                 was done right, to MCS guidelines every time and a tidy site left
@@ -360,14 +360,14 @@ export default function HomePage() {
               </Link>
             </Reveal>
 
-            <Reveal delay={120} className="max-md:order-2 max-md:flex max-md:justify-center md:justify-end">
-              <div className="relative w-[10.5rem] sm:w-48 md:max-w-[16rem] lg:max-w-[18rem]">
-                <div className="relative aspect-[5/6] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 max-md:mx-auto md:aspect-[4/5]">
+            <Reveal delay={120} className="max-md:order-2 max-md:flex max-md:justify-center md:flex md:justify-end">
+              <div className="relative w-[10.5rem] sm:w-48 md:w-full md:max-w-[22rem] lg:max-w-[26rem]">
+                <div className="relative aspect-[5/6] overflow-hidden rounded-2xl shadow-lg ring-1 ring-navy-900/10 max-md:mx-auto md:aspect-[4/5] lg:aspect-[3/4]">
                   <Image
                     src="/images/whitelabel.jpg"
                     alt="Simply Solar installer fitting solar panels on a commercial roof under a clear blue sky"
                     fill
-                    sizes="(max-width: 640px) 168px, (max-width: 1024px) 216px, 288px"
+                    sizes="(max-width: 640px) 168px, (max-width: 1024px) 352px, 416px"
                     className="object-cover object-[center_35%]"
                   />
                 </div>
@@ -375,7 +375,7 @@ export default function HomePage() {
                   <p className="font-display text-xs font-bold leading-none text-navy-900">
                     White-label
                   </p>
-                  <p className="mt-0.5 text-[0.5rem] font-semibold uppercase tracking-wider text-gold-600">
+                  <p className="mt-0.5 text-[0.5rem] font-semibold uppercase tracking-wider text-gold-600 sm:text-[0.5rem]">
                     Under your brand
                   </p>
                 </div>
